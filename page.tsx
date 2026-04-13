@@ -31,8 +31,8 @@ const INDICATORS = [
 ];
 
 // ── Sparkline SVG ─────────────────────────────────────────────────────────
-function Sparkline({ color = "#22c55e", data }) {
-  const w = 80, h = 28;
+function Sparkline({ color = "#22c55e", data }: { color?: string; data: number[] }) {
+  const w: number = 80, h: number = 28;
   const min = Math.min(...data), max = Math.max(...data);
   const pts = data.map((v, i) => {
     const x = (i / (data.length - 1)) * w;
